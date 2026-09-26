@@ -19,8 +19,13 @@
     "event_type": {
       "type": "string",
       "enum": [
+        "COMMUNITY_REVISED",
         "NEED_AGGREGATED",
+        "NEED_WITHDRAWN",
+        "CONSENT_WITHDRAWN",
+        "REVIEW_REQUESTED",
         "SITE_PROPOSED",
+        "SITE_STATUS_CHANGED",
         "FUND_RESERVED",
         "COVERAGE_REVIEWED",
         "SITE_VERIFIED"
@@ -63,6 +68,24 @@
     "SITE_VERIFIED": [
       "evidence_set",
       "verified_by"
+    ],
+    "SITE_PROPOSED": [
+      "applicant_id",
+      "categories",
+      "location_km",
+      "serves_communities"
+    ],
+    "COVERAGE_REVIEWED": [
+      "community_revision",
+      "need_id",
+      "reviewer_id",
+      "applicant_id",
+      "category"
+    ],
+    "COMMUNITY_REVISED": [
+      "community_id",
+      "revision_no",
+      "service_radius_km"
     ]
   },
   "additionalProperties": false
