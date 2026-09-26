@@ -1,0 +1,12 @@
+{
+  "event_id": "092601-004-sample-001",
+  "event_type": "NEED_AGGREGATED",
+  "aggregate_type": "community_revision",
+  "aggregate_id": "community_gap-001",
+  "occurred_at": "2026-09-25T10:00:00+08:00",
+  "version": 1,
+  "payload": {
+    "community_revision": "sample-community_revision",
+    "category": "sample-category"
+  }
+}

@@ -1,0 +1,5 @@
+[project]
+name = "community-gap"
+version = "0.1.0"
+description = "社区便民服务缺口裁决台领域契约"
+requires-python = ">=3.11"
