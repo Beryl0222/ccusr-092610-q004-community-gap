@@ -19,11 +19,16 @@
     "event_type": {
       "type": "string",
       "enum": [
+        "BOUNDARY_PUBLISHED",
         "NEED_AGGREGATED",
         "SITE_PROPOSED",
+        "SITE_STATUS_CHANGED",
+        "FUND_ROUND_OPENED",
         "FUND_RESERVED",
         "COVERAGE_REVIEWED",
-        "SITE_VERIFIED"
+        "DECISION_VERIFIED",
+        "SITE_VERIFIED",
+        "CONSENT_WITHDRAWN"
       ]
     },
     "aggregate_type": {
@@ -32,7 +37,8 @@
         "community_revision",
         "service_need",
         "provider_site",
-        "coverage_decision"
+        "coverage_decision",
+        "funding_round"
       ]
     },
     "aggregate_id": {
@@ -52,17 +58,57 @@
     }
   },
   "payload_required_by_event": {
+    "BOUNDARY_PUBLISHED": [
+      "community_id",
+      "revision",
+      "zones"
+    ],
     "NEED_AGGREGATED": [
+      "community_id",
       "community_revision",
-      "category"
+      "category",
+      "zone",
+      "time_window",
+      "support_total"
+    ],
+    "SITE_PROPOSED": [
+      "applicant_id",
+      "categories",
+      "community_id",
+      "zone",
+      "service_area",
+      "capacity",
+      "opens_at",
+      "closes_at"
+    ],
+    "SITE_STATUS_CHANGED": [
+      "status"
+    ],
+    "FUND_ROUND_OPENED": [
+      "total_budget"
     ],
     "FUND_RESERVED": [
       "funding_round",
       "amount"
     ],
+    "COVERAGE_REVIEWED": [
+      "community_id",
+      "community_revision",
+      "category",
+      "outcome",
+      "reviewer",
+      "safety_review_passed"
+    ],
+    "DECISION_VERIFIED": [
+      "evidence_set",
+      "verified_by"
+    ],
     "SITE_VERIFIED": [
       "evidence_set",
       "verified_by"
+    ],
+    "CONSENT_WITHDRAWN": [
+      "resident_ref"
     ]
   },
   "additionalProperties": false

@@ -1,12 +1,17 @@
 {
   "event_id": "092601-004-sample-001",
   "event_type": "NEED_AGGREGATED",
-  "aggregate_type": "community_revision",
-  "aggregate_id": "community_gap-001",
+  "aggregate_type": "service_need",
+  "aggregate_id": "need:sample-community:夜间购药",
   "occurred_at": "2026-09-25T10:00:00+08:00",
   "version": 1,
   "payload": {
-    "community_revision": "sample-community_revision",
-    "category": "sample-category"
+    "community_id": "sample-community",
+    "community_revision": 1,
+    "category": "夜间购药",
+    "zone": "z-01",
+    "time_window": "night",
+    "vulnerable_group": "general",
+    "support_total": 12
   }
 }
